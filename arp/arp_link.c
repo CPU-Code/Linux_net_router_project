@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-05-01 15:33:57
+ * @LastEditTime: 2020-05-01 22:10:43
+ * @FilePath: \Linux_net_router_project\arp\arp_link.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
@@ -6,9 +14,11 @@
 
 ARP_LINK *arp_head = NULL;
 
-/*
- *function:    释放ARP链表
- *parameter:  ARP_LINK *head ARP链表头
+/**
+ * @function: 释放ARP链表
+ * @parameter: ARP_LINK *head ARP链表头
+ * @return: 
+ * @note: 
  */
 void free_arp_link(ARP_LINK *head)
 {
@@ -22,9 +32,11 @@ void free_arp_link(ARP_LINK *head)
 	}
 }
 
-/*
- *function:		打印ARP链表
- *parameter:	ARP_LINK *head ARP链表头
+/**
+ * @function: 打印ARP链表
+ * @parameter: ARP_LINK *head ARP链表头
+ * @return: 
+ * @note: 
  */
 void printf_arp_link(ARP_LINK *head)
 {
@@ -42,11 +54,12 @@ void printf_arp_link(ARP_LINK *head)
 	printf("---------arp_link_end----------\n\n");
 }
 
-/*
- *function:	    根据IP查找MAC
- *parameter:	ARP_LINK *head ARP链表头  
- *	    	    unsigned char *ip IP地址
- *return: 	   ARP_LINK *查找到的节点
+/**
+ * @function: 根据IP查找MAC
+ * @parameter: ARP_LINK *head ARP链表头
+ * 		  		unsigned char *ip IP地址
+ * @return: 	ARP_LINK *查找到的节点
+ * @note: 
  */
 ARP_LINK *find_arp_from_ip(ARP_LINK *head, unsigned char *ip)
 {
@@ -63,11 +76,12 @@ ARP_LINK *find_arp_from_ip(ARP_LINK *head, unsigned char *ip)
 	return pb;
 }
 
-/*
- *function:	    插入ARP链表
- *parameter:	ARP_LINK *head ARP链表头  
- *	    	    unsigned char *ip IP地址
- *return: 	    ARP_LINK *head ARP链表头
+/**
+ * @function: 插入ARP链表
+ * @parameter: ARP_LINK *head ARP链表头
+ * 				unsigned char *ip IP地址
+ * @return: ARP_LINK *head ARP链表头
+ * @note: 
  */
 ARP_LINK *inner_arp_link(ARP_LINK *head, ARP_LINK* p)
 {
