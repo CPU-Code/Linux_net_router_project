@@ -16,7 +16,8 @@
 
 int main(int argc, char *argv[])
 {
-    char recv_buff[RECV_SIZE] = "";//原始套接字数据包大约为1500个字节
+	//原始套接字数据包大约为1500个字节
+    char recv_buff[RECV_SIZE] = "";
 	ssize_t recv_len = 0;
     
 	//初始化 配置文件
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
 	getinterface();
 	//创建键盘处理函数并脱离
 	pthread_t KEY_T;
-	pthread_create(&KEY_T, NULL,key_pthread, NULL);
+	pthread_create(&KEY_T, NULL, key_pthread, NULL);
 	pthread_detach(KEY_T);
 	
 	//创建原始套接字,接收所有类型的数据包
@@ -59,7 +60,7 @@ int main(int argc, char *argv[])
 
 			memcpy(p->mac, recv_buff + 22, 6);	//mac
 			memcpy(p->ip , recv_buff + 28, 4);	//ip
-			printf("%d.%d.%d.%d-->",p->ip[0],p->ip[1],p->ip[2],p->ip[3]);
+			printf("%d.%d.%d.%d-->",p->ip[0], p->ip[1], p->ip[2], p->ip[3]);
 
 			pthread_t ARP_T;
 			pthread_create(&ARP_T, NULL, arp_pthread, (void*)p);

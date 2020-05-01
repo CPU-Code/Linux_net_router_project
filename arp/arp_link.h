@@ -16,7 +16,7 @@ extern ARP_LINK *arp_head;
  *              unsigned char *ip IP地址
  *return: ARP_LINK *head ARP链表头
  */
-extern ARP_LINK *inner_arp_link(ARP_LINK *arp_head,ARP_LINK* p);
+extern ARP_LINK *inner_arp_link(ARP_LINK *arp_head, ARP_LINK* p);
 
 /*
  *function:打印ARP链表
