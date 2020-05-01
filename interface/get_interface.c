@@ -1,3 +1,11 @@
+/*
+ * @Author: cpu_code
+ * @Date: 2020-05-01 17:33:06
+ * @LastEditTime: 2020-05-01 22:16:24
+ * @FilePath: \Linux_net_router_project\interface\get_interface.c
+ * @Gitee: https://gitee.com/cpu_code
+ * @CSDN: https://blog.csdn.net/qq_44226094
+ */
 #include <arpa/inet.h>
 #include <net/if.h>
 #include <net/if_arp.h>
@@ -11,17 +19,22 @@
 #include <netinet/ether.h>	
 #include "get_interface.h"
 
-/*
- *function:	获取接口数量
- *return:   接口数量
+/**
+ * @function: 获取接口数量
+ * @parameter: 
+ * @return: 接口数量
+ * @note: 
  */
 int get_interface_num()
 {
 	return interface_num;
 }
 
-/*
- *function:	获取接口信息
+/**
+ * @function: 获取接口信息
+ * @parameter: 
+ * @return: 
+ * @note: 
  */
 void getinterface()
 {
