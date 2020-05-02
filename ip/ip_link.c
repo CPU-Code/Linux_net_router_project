@@ -1,7 +1,7 @@
 /*
  * @Author: cpu_code
  * @Date: 2020-05-01 17:41:35
- * @LastEditTime: 2020-05-01 22:22:02
+ * @LastEditTime: 2020-05-02 10:15:23
  * @FilePath: \Linux_net_router_project\ip\ip_link.c
  * @Gitee: https://gitee.com/cpu_code
  * @CSDN: https://blog.csdn.net/qq_44226094
@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+
 #include "ip_link.h"
 
 #define ip_config_name "ip_config"
